@@ -1,0 +1,37 @@
+.uberhead { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 180%; }
+.head { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 130%; }
+.subhead { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 120%; }
+.bodytext { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 90%; }
+.smbodytext { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 70%; }
+.xsmbodytext { font-family: Arial, Helvetica, Sans-Serif, Times; font-size: 60%; }
+.tabon { font-family : Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : bold; }
+.taboff { font-family : Arial, Helvetica, sans-serif; font-size: 11pt; }
+
+A:ACTIVE { font-family : Arial, Helvetica, sans-serif; color : #660A0A; }
+A:LINK { font-family : Arial, Helvetica, sans-serif; color : #660A0A; }
+A:VISITED { font-family : Arial, Helvetica, sans-serif; color : #660A0A; }
+A:HOVER { font-family : Arial, Helvetica, sans-serif; color : #660A0A; }
+
+A.naplink:ACTIVE, A.naplink:LINK, A.naplink:VISITED, A.naplink:HOVER { color: #17630B; font-weight: bold;}
+A.whitelink:ACTIVE, A.whitelink:LINK, A.whitelink:VISITED, A.whitelink:HOVER { color: #ffffff;}
+
+/*
+     FILE ARCHIVED ON 15:58:23 Aug 01, 2001 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:23:43 Apr 03, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.977
+  exclusion.robots: 0.237
+  exclusion.robots.policy: 0.221
+  cdx.remote: 0.097
+  esindex: 0.014
+  LoadShardBlock: 41.828 (3)
+  PetaboxLoader3.datanode: 58.324 (4)
+  load_resource: 64.98
+  PetaboxLoader3.resolve: 45.863
+*/

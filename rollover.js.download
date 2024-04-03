@@ -1,0 +1,72 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+<!--
+
+if (document.images)
+{
+	image1on	= new Image(); image1on.src	= "./Slimmed Napster_files/homeOn.png";
+	image1off	= new Image(); image1off.src	= "./Slimmed Napster_files/homeOn.png";
+
+	image2on	= new Image(); image2on.src	= "./Slimmed Napster_files/dexscreenerOn.png";
+	image2off	= new Image(); image2off.src	= "./Slimmed Napster_files/dexscreenerOff.png";
+
+	image3on	= new Image(); image3on.src	= "./Slimmed Napster_files/buynowOn.png";
+	image3off	= new Image(); image3off.src	= "./Slimmed Napster_files/buynowOff.png";
+
+	image4on	= new Image(); image4on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/newArtistsOn.gif";
+	image4off	= new Image(); image4off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/newArtistsOff.gif";
+
+	image5on	= new Image(); image5on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/pressOn.gif";
+	image5off	= new Image(); image5off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/pressOff.gif";
+
+	image6on	= new Image(); image6on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/helpOn.gif";
+	image6off	= new Image(); image6off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/helpOff.gif";
+
+	image7on	= new Image(); image7on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/serviceStatusOn.gif";
+	image7off	= new Image(); image7off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/serviceStatusOff.gif";
+
+	image8on	= new Image(); image8on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/companyOn.gif";
+	image8off	= new Image(); image8off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/companyOff.gif";
+
+	image9on	= new Image(); image9on.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/termsOn.gif";
+	image9off	= new Image(); image9off.src	= "https://web.archive.org/web/20010610184225/http://img.napster.com/nav/termsOff.gif";
+}
+
+function changeImages()
+{
+	if (document.images)
+	{
+		for (var i=0; i<changeImages.arguments.length; i+=2)
+		{
+			document[changeImages.arguments[i]].src = eval(changeImages.arguments[i+1] + ".src");
+		}
+	}
+}
+
+// -->
+
+
+}
+
+/*
+playback timings (ms):
+  captures_list: 0.711
+  exclusion.robots: 0.082
+  exclusion.robots.policy: 0.072
+  cdx.remote: 0.061
+  esindex: 0.009
+  LoadShardBlock: 54.284 (3)
+  PetaboxLoader3.datanode: 68.596 (4)
+  load_resource: 467.211
+  PetaboxLoader3.resolve: 422.284
+*/
