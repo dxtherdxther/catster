@@ -1,0 +1,731 @@
+<title>Napster</title>
+
+<style type="text/css">@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></head> 
+<!-- start header -->
+<body bgcolor="#7C869C" link="#660A0A" vlink="#660A0A" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+
+
+ 
+<link rel="stylesheet" type="text/css" href="./Slimmed Napster_files/napstyle_pc.css">
+<script src="./Slimmed Napster_files/rollover.js.download" language="javascript"></script>
+<table border="0" cellspacing="0" cellpadding="0" width="610">
+   <tbody><tr>
+      <td colspan="4" valign="bottom"><img src="./Slimmed Napster_files/logo.png" width="215" height="95" alt="Napster" border="0"></td>    
+      <td align="right" valign="bottom"><script language="JavaScript">
+      <!-- 
+         document.write("<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td valign=\"top\" width=\"20\"><img src=\"http://img.napster.com/spacer.gif\" width=\"20\" height=\"1\" alt=\"\" border=\"0\"></td><td valign=\"bottom\"><font size=\"1\" face=\"Arial, Helvetica, sans-serif\" class=\"smbodytext\" color=\"#FFFFFF\"><b>" + quotes[randNum2] + "</b><br><< <a class=\"whitelink\" href=\"/speakout/artists.html\">more</a> >><br><br></font></td></tr></table>");				
+      // -->
+      </script><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" width="20"><img src="./Slimmed Napster_files/spacer.gif" width="20" height="1" alt="" border="0"></td><td valign="bottom"><font size="1" face="Arial, Helvetica, sans-serif" class="smbodytext" color="#FFFFFF"><b>"We have just finished a tour, we played in Barcelona, the next day the entire performance was up on Napster and three weeks later when  we got to play in Israel the audience knew the words to all the new songs and it was wonderful..." -- Colin Greenwood (Radiohead)</b><br>&lt;&lt; <a class="whitelink" href="https://web.archive.org/web/20010720190701mp_/http://napster.com/speakout/artists.html">more</a> &gt;&gt;<br><br></font></td></tr></tbody></table><noscript><img src="https://web.archive.org/web/20010720190701im_/http://img.napster.com/eq.gif" width="88" height="34" alt="" border="0"><img src="https://web.archive.org/web/20010720190701im_/http://img.napster.com/spacer.gif" width="12" height="1" alt="" border="0"></noscript></td>
+   </tr>
+   <tr>
+      <td valign="top"><img src="./Slimmed Napster_files/logo_bottom.gif" width="7" height="29" alt="" border="0"></td>
+      <td valign="top">
+<!-- start nav table -->
+<table border="0" cellspacing="0" cellpadding="0" width="120">
+   <tbody><tr><td bgcolor="#525D76"><img src="./Slimmed Napster_files/top.gif" width="120" height="11" alt="" border="0"></td></tr>
+   <tr><td bgcolor="#525D76"><a href="file:///C:/Users/dxwn/Desktop/Catster/Slimmed%20Napster.html"><img src="./Slimmed Napster_files/homeOn.png" name="image1" width="120" height="17" border="0" alt="Home"></a></td></tr>
+   <tr><td bgcolor="#525D76"><a href="http://dexscreener.com" onmouseover="changeImages(&#39;image2&#39;,&#39;image2on&#39;)" onmouseout="changeImages(&#39;image2&#39;,&#39;image2off&#39;)"><img src="./Slimmed Napster_files/dexscreenerOff.png" name="image2" width="120" height="17" border="0" alt="Chart"></a></td></tr>
+   <tr><td bgcolor="#525D76"><a href="https://app.uniswap.org/#/swap" onmouseover="changeImages(&#39;image3&#39;,&#39;image3on&#39;)" onmouseout="changeImages(&#39;image3&#39;,&#39;image3off&#39;)"><img src="./Slimmed Napster_files/buynowOff.png" name="image3" width="120" height="17" border="0" alt="Buy Now"></a></td></tr>
+   <tr><td bgcolor="#525D76"><img src="./Slimmed Napster_files/hr.gif" width="120" height="17" alt=" " border="0"></td></tr>
+   <tr><td bgcolor="#525D76"><img src="./Slimmed Napster_files/bottom.gif" width="120" height="6" alt="" border="0"></td></tr>
+   <tr><td><img src="./Slimmed Napster_files/spacer.gif" width="1" height="5" alt="" border="0"></td></tr>
+      <tr>
+      <td>
+         <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <form name="newsletter" action="https://web.archive.org/web/20010720190701/http://newsletter.napster.com/confirm.php"></form>
+            <input type="hidden" name="action" value="subscribe">
+            <tbody><tr>
+               <td colspan="2"><img src="./Slimmed Napster_files/top(1).gif" width="120" height="6" alt="" border="0"></td>
+            </tr>
+            <tr>
+               <td colspan="2" background="./Slimmed Napster_files/bg.gif" align="center">
+                  <img src="./Slimmed Napster_files/pflag.gif" width="100" height="80" alt="Get the Napster Newsletter" border="0"><br>
+                  <img src="./Slimmed Napster_files/spacer.gif" width="1" height="5" alt="" border="0"><br>
+                  <font face="Arial, Helvetica, Sans-Serif" size="2" color="#ffffff" class="xsmbodytext">
+                  </font>
+               </td>
+            </tr>
+            <tr>
+               <td><img src="./Slimmed Napster_files/bottomcurve.gif" width="14" height="11" alt="" border="0"></td>
+               <td><img src="./Slimmed Napster_files/bottom(1).gif" width="106" height="11" alt="" border="0"></td>
+            </tr>
+            
+         </tbody></table>
+      </td>
+   </tr>
+</tbody></table>
+<table border="0" cellpadding="2" cellspacing="0" width="120">
+   <tbody><tr>
+      <td align="center">
+         <img src="./Slimmed Napster_files/spacer.gif" width="1" height="5" alt="" border="0"><br>
+         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="./Slimmed Napster_files/copyright_policy.gif" height="25" width="86" alt="" border="0"></a><p>      
+      </p></td>
+   </tr>
+</tbody></table>
+<!-- end newsletter box -->
+<!-- end nav table -->
+      </td>
+      <td valign="top" width="10"><img src="./Slimmed Napster_files/spacer.gif" width="10" height="1" alt="" border="0"></td>
+      <td valign="top" colspan="2">
+<!-- end header -->
+<!-- start body table -->
+      <table border="0" cellspacing="0" cellpadding="0" width="470">
+        <tbody><tr>
+          <td bgcolor="#FFFFFF" colspan="5" width="470"><img src="./Slimmed Napster_files/body_top.gif" width="470" height="11" alt="" border="0"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000000" width="1"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+          <td bgcolor="#ffffff" width="10"><img src="./Slimmed Napster_files/spacer.gif" width="10" height="1" alt="" border="0"></td>
+          <td bgcolor="#ffffff" width="448"><img src="./Slimmed Napster_files/spacer.gif" width="448" height="1" alt="" border="0"></td>
+          <td bgcolor="#ffffff" width="10"><img src="./Slimmed Napster_files/spacer.gif" width="10" height="1" alt="" border="0"></td>
+          <td bgcolor="#000000" width="1"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+        </tr>
+        <tr valign="top">
+          <td bgcolor="#000000" width="1"><img border="0" src="./Slimmed Napster_files/spacer.gif" width="1" height="12"></td>
+          <td bgcolor="#FFFFFF" width="10"><img src="./Slimmed Napster_files/spacer.gif" width="9" height="1" alt="" border="0"></td>
+          <td bgcolor="#FFFFFF" width="448">
+<!-- start body content -->
+<!-- **************************************************************************
+WELCOME TO NAPSTER
+*************************************************************************** -->
+<table border="0" cellpadding="4" width="448">
+   <tbody><tr valign="top">
+      <td width="300">
+         <div align="justify">
+         <font face="Arial, Helvetica, Sans-Serif" class="smbodytext" size="1">
+         Join the largest, most diverse online community of music 
+         lovers in history by downloading and installing Napster. It's 
+         fun, simple, free, and available for Windows and the Mac.
+         </font>
+         </div>
+      </td>
+      <td width="148">
+         <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#999999">
+         <tbody><tr><td><table border="0" cellpadding="3" cellspacing="1" width="100%">
+         <tbody><tr><td bgcolor="#e6e6e6" align="center"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="5" border="0" alt=""><br><a href="https://web.archive.org/web/20010720190701/http://napster.com/download/" onmouseover="changeImages(&#39;image10&#39;,&#39;image10on&#39;)" onmouseout="changeImages(&#39;image10&#39;,&#39;image10off&#39;)"><img src="./Slimmed Napster_files/icon_download_off.gif" width="114" height="31" alt="Download Napster!" border="0" name="image10"></a><br><img src="./Slimmed Napster_files/spacer.gif" width="1" height="5" border="0" alt=""></td></tr>
+         </tbody></table>
+         </td></tr></tbody></table>
+      </td>
+   </tr>
+</tbody></table>
+<!-- **************************************************************************
+News Flash
+*************************************************************************** -->
+<font face="Arial, Helvetica, sans-serif" size="3" class="head"><b><i>About Us</i></b></font><br>
+<table border="0" cellpadding="0" cellspacing="0" width="448" bgcolor="#999999">
+   <tbody><tr>
+      <td>
+         <table border="0" cellpadding="3" cellspacing="1" width="448">
+            <tbody><tr> 
+               <td bgcolor="#e6e6e6">
+                  <font face="Arial, Helvetica, Sans-Serif" class="bodytext" size="2">
+		  On July 11, 2001, the District Court issued an order prohibiting Napster from turning file transfers back on. We believe that this order is at odds with the appeals court ruling in February and threatens all peer-to-peer file sharing.  While we are extremely disappointed by this ruling, we will make every effort to resume file transfers as soon as possible and we are continuing full steam ahead toward the launch of our new service later this summer.  Thanks for your support and keep checking this space for updates.
+		  </font>
+               </td>
+            </tr>
+            <tr>
+               <td bgcolor="#d3d9e7">
+               <table border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                     <td width="16"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+                     <td colspan="2" width="100%"><font face="Arial, Helvetica, Sans-Serif" class="smbodytext">&nbsp;<b><a href="https://web.archive.org/web/20010720190701/http://www.napster.com/pressroom/010711-statement.html">Statement of Hank Barry, Interim CEO of Napster</a></b></font></td>
+                  </tr>
+               </tbody></table>
+               </td>
+            </tr>
+      </tbody></table>
+</td></tr></tbody></table>
+<p>
+<!-- **************************************************************************
+END NEWS FLASH
+*************************************************************************** -->
+
+</p><p>
+<!-- **************************************************************************
+BETA TEST
+*************************************************************************** -->
+<font face="Arial, Helvetica, sans-serif" size="4" class="subhead"><b><i>Preview the New Napster</i></b></font><br>
+<table border="0" cellpadding="0" cellspacing="0" width="448" bgcolor="#999999">
+   <tbody><tr>
+      <td>
+         <table border="0" cellpadding="3" cellspacing="1" width="448">
+            <tbody><tr>
+               <td bgcolor="#e6e6e6">
+                  <font face="Arial, Helvetica, Sans-Serif" class="bodytext">
+         		   <b>Be the first to preview the new membership service.</b>
+         		   If you're interested in being chosen as a beta tester, provide us with your email address.
+         		   More information to follow soon.
+                 </font>
+               </td>
+            </tr>
+            <tr>
+               <td bgcolor="#d3d9e7" align="center">
+                  <table border="0" cellpadding="2" cellspacing="0">
+                     <form action="https://web.archive.org/web/20010720190701/http://cgi.napster.com/betatest/" method="post"></form>
+                     <tbody><tr>
+                        <td valign="middle"><font face="Arial, Helvetica, Sans-Serif" class="bodytext" size="2"><b>Enter your email address</b></font></td>
+                        <td><input type="text" name="email"></td>
+                        <td><input type="image" src="./Slimmed Napster_files/submit_button.gif" name="submit" border="0"></td>
+                     </tr>
+                     
+                  </tbody></table>
+               </td>
+            </tr>
+         </tbody></table>
+</td></tr></tbody></table>
+</p><p>
+<!-- **************************************************************************
+FEATURED MUSIC
+*************************************************************************** -->
+
+   <font face="Arial, Helvetica, sans-serif" size="4" class="subhead"><b><i>Discover Featured Music</i></b></font><br>
+   <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#999999">
+      <tbody><tr>
+         <td>
+            <table border="0" cellpadding="3" cellspacing="1" width="100%">
+               <tbody><tr>
+                  <td colspan="2" bgcolor="#7b869c">
+                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                           <td>
+                              <font face="Arial, Helvetica, Sans-Serif" color="#ffffff" class="bodytext"><b>
+                              Tha Eastsidaz
+                              </b></font>
+                           </td>
+                           <td align="right">
+                              <font face="Arial, Helvetica, Sans-Serif" color="#ffffff" class="bodytext"><b>
+                              <a class="whitelink" href="https://web.archive.org/web/20010720190701/http://artist.napster.com/archive.html#Hip-Hop">Hip-Hop</a>
+                              </b></font>
+                           </td>
+                        </tr>
+                     </tbody></table>                     
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2" bgcolor="#ffffff" width="100%">
+                     <a href="https://web.archive.org/web/20010720190701/http://artist.napster.com/"><img src="./Slimmed Napster_files/thaeastsidaz.gif" width="269" height="160" alt="" border="0" align="left" hspace="10"></a>
+                     <font face="Arial, Helvetica, Sans-Serif" class="bodytext">
+                     Snoop Dogg's Tha Eastsidaz inject funk and soul deep into the heart of  "ILUVIT," the first single from the group's sophomore LP, <i>Duces 'N Trayz The Old Fashioned Way</i>.  Out July 31 on Doggy Style / TVT Records, the album features appearances from heavyweights like Nate Dogg, Kurrupt, Mobb Deep, Lil' Mo and more.  Click on the Eastsidaz Website link for a chance to win an American CD DJ system and more!
+                     </font>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2" bgcolor="#e6e6e6" width="100%">
+                     <font face="Arial, Helvetica, Sans-Serif" class="bodytext">
+                     Search Napster for "<b>ILUVIT</b>" by <b>Tha Eastsidaz</b>
+                     </font>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2" bgcolor="#d3d9e7" width="100%">
+                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                           <td width="16"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+                           <td>
+                              <font face="Arial, Helvetica, Sans-Serif" class="smbodytext"><b>
+                              <a target="_blank" href="https://web.archive.org/web/20010720190701/http://www.burlybear.com/music/featured_artist/eastsidaz/">Go to Tha Eastsidaz Website</a>
+                              </b></font>
+                           </td>
+                        </tr>
+                        <tr>  
+                           <td width="16"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+                           <td>
+                              <font face="Arial, Helvetica, Sans-Serif" class="smbodytext"><b>
+                              <a href="https://web.archive.org/web/20010720190701/http://artist.napster.com/">Discover More Featured Music</a>
+                              </b></font>
+                           </td>
+                        </tr>
+                     </tbody></table>
+                  </td>
+               </tr>
+            </tbody></table>
+         </td>
+      </tr>
+   </tbody></table>
+   </p><p>
+   <!-- **************************************************************************
+SPEAK OUT
+*************************************************************************** -->
+<font face="Arial, Helvetica, sans-serif" size="4" class="subhead"><b><i>Send Congress a Message</i></b></font><br>
+<table border="0" cellpadding="0" cellspacing="0" width="448" bgcolor="#999999">
+   <tbody><tr>
+      <td>
+         <table border="0" cellpadding="3" cellspacing="1" width="448">
+            <tbody><tr>
+               <td bgcolor="#e6e6e6">
+                  <a href="https://web.archive.org/web/20010720190701/http://www.napster.com/speakout/"><img src="./Slimmed Napster_files/speakout.gif" width="124" height="84" border="0" hspace="10" vspace="10" align="left"></a>
+                  <font face="Arial, Helvetica, Sans-Serif" class="bodytext">
+		  <b>You have the power to keep file-sharing over the Internet alive</b>.
+		  Washington insiders should never win out over the will of the people. 
+        Contact Congress by email to let them know how you feel. You can make a
+		  difference.
+                  </font>
+               </td>
+            </tr>
+            <tr>
+               <td bgcolor="#d3d9e7">
+   <table border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+         <td width="16"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+         <td><font face="Arial, Helvetica, Sans-Serif" class="smbodytext">&nbsp;<b><a href="https://web.archive.org/web/20010720190701/http://newsletter.napster.com/nan/">Join the Napster Action Network</a></b></font></td>
+      </tr>
+      <tr>
+         <td width="16" valign="top"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+         <td valign="top"><font face="Arial, Helvetica, Sans-Serif" class="smbodytext">&nbsp;<b><a href="https://web.archive.org/web/20010720190701/http://speakout.napster.com/">Contact Congress by email</a></b></font></td>
+      </tr>
+   </tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+</p><p>
+<!-- **************************************************************************
+STAR POLISH
+*************************************************************************** -->
+<font face="Arial, Helvetica, sans-serif" size="4" class="subhead"><b><i>Musicians, Control Your Destiny</i></b></font><br>
+<table border="0" cellpadding="0" cellspacing="0" width="448" bgcolor="#999999">
+   <tbody><tr>
+      <td>
+         <table border="0" cellpadding="3" cellspacing="1" width="448">
+            <tbody><tr>
+               <td bgcolor="#e6e6e6">
+                  <a href="https://web.archive.org/web/20010720190701/http://artist.napster.com/advice/"><img src="./Slimmed Napster_files/starpolish.gif" alt="" width="120" height="60" border="0" hspace="10" align="left"></a>
+                  <font face="Arial, Helvetica, Sans-Serif" class="bodytext" size="2">
+                  Get valuable advice on how the music industry works and how to manage a
+                  music career from the experts at StarPolish. Check out weekly featured
+                  articles alongside a comprehensive library of career advice, from booking
+                  shows to getting signed. Also learn how to convert your songs to MP3's and
+                  use Napster to get your music out to the world and to develop your career.
+                  </font>
+               </td>
+            </tr>
+            <tr>
+               <td bgcolor="#d3d9e7">
+               <table border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                     <td width="16"><img src="./Slimmed Napster_files/circle_arrow.gif" width="14" height="14" border="0" alt=""></td>
+                     <td colspan="2" width="100%"><font face="Arial, Helvetica, Sans-Serif" class="smbodytext">&nbsp;<b><a href="https://web.archive.org/web/20010720190701/http://artist.napster.com/advice/">Empower Yourself!</a></b></font></td>
+                  </tr>
+               </tbody></table>
+               </td>
+            </tr>
+      </tbody></table>
+</td></tr></tbody></table>
+
+<!-- end body content -->
+          </p></td>
+          <td bgcolor="#FFFFFF" width="10"><img src="./Slimmed Napster_files/spacer.gif" width="10" height="1" alt="" border="0"></td>
+          <td bgcolor="#000000" width="1" align="right"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+        </tr>
+      </tbody></table>
+<!-- end body table -->
+      <table border="0" cellpadding="0" cellspacing="0" width="470">
+	<tbody><tr>
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+	  <td bgcolor="#ffffff" align="center" colspan="2" width="468" nowrap="">&nbsp;<br><img src="./Slimmed Napster_files/spacer.gif" width="468" height="1" alt="" border="0"></td>
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+	</tr>
+	<tr>
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<!-- start bottom nav -->
+	  <td bgcolor="#ffffff" align="center" colspan="2" width="468" nowrap=""><font face="arial" size="1" class="smbodytext"><a href="https://web.archive.org/web/20010720190701/http://www.napster.com/index.html">home</a> | <a href="https://web.archive.org/web/20010720190701/http://www.napster.com/download/">download</a> | <a href="https://web.archive.org/web/20010720190701/http://www.napster.com/speakout/">speak out</a> | <a href="https://web.archive.org/web/20010720190701/http://artist.napster.com/">discover</a> | <a href="https://web.archive.org/web/20010720190701/http://www.napster.com/pressroom/">press room</a> | <a href="https://web.archive.org/web/20010720190701/http://www.napster.com/help/">help</a></font></td>
+<!-- end bottom nav -->
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+	</tr>
+	<tr>
+	  <td bgcolor="#000000" colspan="4" width="470"><img border="0" src="./Slimmed Napster_files/spacer.gif" alt="" width="1" height="1"></td>
+	</tr>
+	<tr>
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+	  <td bgcolor="#BBBBBB" align="center" colspan="2" width="468" nowrap=""><font face="Arial" size="1" class="smbodytext"><i>Copyright 2001 Napster Inc.&nbsp; All Rights Reserved</i></font></td>
+	  <td width="1" bgcolor="#000000"><img src="./Slimmed Napster_files/spacer.gif" width="1" height="1" alt="" border="0"></td>
+	</tr>
+	<tr>
+	  <td bgcolor="#000000" colspan="4" width="470"><img border="0" src="./Slimmed Napster_files/spacer.gif" alt="" width="1" height="1"></td>
+	</tr>
+      </tbody></table>
+      <br>
+    </td>
+  </tr>
+  
+</tbody></table>
+
+
+
+
+<div id="__spoken_extension"><div><template shadowrootmode="closed"><div></div><style type="text/css">@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:100;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:200;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Inter";font-style:normal;font-weight:900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v7/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}*{font-family:"Inter","Helvetica Neue",sans-serif !important;border-style:solid}a{all:initial}@keyframes spinner-two-alt{0%{transform:rotate(0deg)}to{transform:rotate(359deg)}}.sk-spin{animation:spinner-two-alt 1s cubic-bezier(0.6, 0, 0.4, 1) infinite}*{font-size:14px}/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize *//*
+Document
+========
+*//**
+Use a better box model (opinionated).
+*/*,
+::before,
+::after {
+	box-sizing: border-box;
+}/**
+Use a more readable tab size (opinionated).
+*/html {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	   tab-size: 4;
+}/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}/*
+Sections
+========
+*//**
+Remove the margin in all browsers.
+*/body {
+	margin: 0;
+}/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}/*
+Grouping content
+================
+*//**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+}/*
+Text-level semantics
+====================
+*//**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/abbr[title] {
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+}/**
+Add the correct font weight in Edge and Safari.
+*/b,
+strong {
+	font-weight: bolder;
+}/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}/**
+Add the correct font size in all browsers.
+*/small {
+	font-size: 80%;
+}/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}sub {
+	bottom: -0.25em;
+}sup {
+	top: -0.5em;
+}/*
+Tabular data
+============
+*//**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}/*
+Forms
+=====
+*//**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/button,
+select { /* 1 */
+	text-transform: none;
+}/**
+Correct the inability to style clickable types in iOS and Safari.
+*/button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}/**
+Remove the inner border and padding in Firefox.
+*/::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}/**
+Restore the focus styles unset by the previous rule.
+*/:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/:-moz-ui-invalid {
+	box-shadow: none;
+}/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/legend {
+	padding: 0;
+}/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/progress {
+	vertical-align: baseline;
+}/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/::-webkit-search-decoration {
+	-webkit-appearance: none;
+}/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}/*
+Interactive
+===========
+*//*
+Add the correct display in Chrome and Safari.
+*/summary {
+	display: list-item;
+}/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ *//**
+ * Removes the default spacing and border for appropriate elements.
+ */blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}button {
+  background-color: transparent;
+  background-image: none;
+}fieldset {
+  margin: 0;
+  padding: 0;
+}ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}/**
+ * Tailwind custom reset styles
+ *//**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */html {
+  font-family: Inter, sans-serif; /* 1 */
+  line-height: 1.5; /* 2 */
+}/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */body {
+  font-family: inherit;
+  line-height: inherit;
+}/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}/*
+ * Ensure horizontal rules are visible by default
+ */hr {
+  border-top-width: 1px;
+}/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */img {
+  border-style: solid;
+}textarea {
+  resize: vertical;
+}input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}button,
+[role="button"] {
+  cursor: pointer;
+}/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */:-moz-focusring {
+	outline: auto;
+}table {
+  border-collapse: collapse;
+}h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */a {
+  color: inherit;
+  text-decoration: inherit;
+}/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */pre,
+code,
+kbd,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */img,
+video {
+  max-width: 100%;
+  height: auto;
+}/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */[hidden] {
+  display: none;
+}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-border-opacity:1;border-color:rgba(229, 231, 235, var(--tw-border-opacity));--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.absolute{position:absolute}.relative{position:relative}.inset-y-0{top:0px;bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-32{top:128px}.left-2{left:8px}.my-2{margin-top:8px;margin-bottom:8px}.-mx-1{margin-left:-4px;margin-right:-4px}.-my-1{margin-top:-4px;margin-bottom:-4px}.mb-4{margin-bottom:16px}.mt-2{margin-top:8px}.mt-1{margin-top:4px}.ml-auto{margin-left:auto}.mr-1{margin-right:4px}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-8{height:32px}.h-4{height:16px}.h-5{height:20px}.h-11{height:44px}.h-14{height:56px}.h-7{height:28px}.w-full{width:100%}.w-2\/3{width:66.666667%}.w-4{width:16px}.w-5{width:20px}.w-1\/3{width:33.333333%}.w-5\/6{width:83.333333%}.w-1\/6{width:16.666667%}.w-7{width:28px}.w-max{width:-moz-max-content;width:max-content}.flex-grow{flex-grow:1}.transform{transform:var(--tw-transform)}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}.cursor-pointer{cursor:pointer}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:8px}.gap-4{gap:16px}.gap-y-1{row-gap:4px}.gap-y-3{row-gap:12px}.gap-x-4{-moz-column-gap:16px;column-gap:16px}.gap-x-1{-moz-column-gap:4px;column-gap:4px}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(12px * var(--tw-space-x-reverse));margin-left:calc(12px * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(8px * var(--tw-space-x-reverse));margin-left:calc(8px * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(8px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(8px * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(16px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(16px * var(--tw-space-y-reverse))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(24px * var(--tw-space-x-reverse));margin-left:calc(24px * calc(1 - var(--tw-space-x-reverse)))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(24px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(24px * var(--tw-space-y-reverse))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(16px * var(--tw-space-x-reverse));margin-left:calc(16px * calc(1 - var(--tw-space-x-reverse)))}.divide-y-8 > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(8px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(8px * var(--tw-divide-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gray-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgba(243, 244, 246, var(--tw-divide-opacity))}.divide-gray-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgba(229, 231, 235, var(--tw-divide-opacity))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-md{border-radius:6px}.rounded-sm{border-radius:2px}.rounded-r-md{border-top-right-radius:6px;border-bottom-right-radius:6px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-dashed{border-style:dashed}.border-gray-300{--tw-border-opacity:1;border-color:rgba(209, 213, 219, var(--tw-border-opacity))}.border-transparent{border-color:transparent}.border-gray-200{--tw-border-opacity:1;border-color:rgba(229, 231, 235, var(--tw-border-opacity))}.border-b-gray-200{--tw-border-opacity:1;border-bottom-color:rgba(229, 231, 235, var(--tw-border-opacity))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243, 244, 246, var(--tw-bg-opacity))}.bg-spoken-pink{--tw-bg-opacity:1;background-color:rgba(238, 5, 110, var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgba(255, 255, 255, var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgba(79, 70, 229, var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249, 250, 251, var(--tw-bg-opacity))}.bg-gray-400{--tw-bg-opacity:1;background-color:rgba(156, 163, 175, var(--tw-bg-opacity))}.bg-yellow-200{--tw-bg-opacity:1;background-color:rgba(253, 230, 138, var(--tw-bg-opacity))}.bg-red-200{--tw-bg-opacity:1;background-color:rgba(254, 202, 202, var(--tw-bg-opacity))}.bg-cover{background-size:cover}.bg-center{background-position:center}.bg-no-repeat{background-repeat:no-repeat}.p-4{padding:16px}.p-3{padding:12px}.p-1\.5{padding:6px}.p-1{padding:4px}.p-6{padding:24px}.p-2{padding:8px}.px-4{padding-left:16px;padding-right:16px}.py-3{padding-top:12px;padding-bottom:12px}.py-8{padding-top:32px;padding-bottom:32px}.py-2{padding-top:8px;padding-bottom:8px}.px-1\.5{padding-left:6px;padding-right:6px}.px-1{padding-left:4px;padding-right:4px}.py-0\.5{padding-top:2px;padding-bottom:2px}.py-0{padding-top:0px;padding-bottom:0px}.px-2{padding-left:8px;padding-right:8px}.py-1{padding-top:4px;padding-bottom:4px}.pl-3{padding-left:12px}.pl-7{padding-left:28px}.pr-12{padding-right:48px}.pr-3{padding-right:12px}.text-center{text-align:center}.text-xs{font-size:12px;line-height:16px}.text-sm{font-size:14px;line-height:20px}.text-base{font-size:16px;line-height:24px}.font-semibold{font-weight:600}.font-normal{font-weight:400}.font-medium{font-weight:500}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.text-gray-600{--tw-text-opacity:1;color:rgba(75, 85, 99, var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgba(17, 24, 39, var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgba(107, 114, 128, var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55, 65, 81, var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity))}.text-indigo-500{--tw-text-opacity:1;color:rgba(99, 102, 241, var(--tw-text-opacity))}.text-yellow-800{--tw-text-opacity:1;color:rgba(146, 64, 14, var(--tw-text-opacity))}.text-red-800{--tw-text-opacity:1;color:rgba(153, 27, 27, var(--tw-text-opacity))}.underline{text-decoration:underline}.shadow{--tw-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.05);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;transition-property:background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0, 0, 0.2, 1);transition-duration:150ms}:root{--primary-color: #4338ca;--primary-bg: #e0e7ff;--red-50: #fef2f2;--red-100: #fee2e2;--red-800: #991b1b;--blue-50: #eff6ff;--blue-100: #dbeafe;--blue-800: #1e40af;--green-50: #f0fdf4;--green-100: #dcfce7;--green-800: #166534;--yellow-50: #fefce8;--yellow-100: #fef9c3;--yellow-800: #854d0e;--copy: #374151}.create-Icon{flex-shrink:0;fill:currentColor}.create-Icon.size-medium{height:1.25rem;width:1.25rem}.create-Icon.size-small{height:1rem;width:1rem}.create-Text.type-h1{font-family:'Inter', sans-serif;font-style:normal;font-weight:bold;font-size:64px;line-height:68px;letter-spacing:-1.008px}.create-Text.type-h2{font-family:'Inter', sans-serif;font-style:normal;font-weight:bold;font-size:48px;line-height:56px;letter-spacing:-1.008px}.create-Text.type-h3{font-family:'Inter', sans-serif;font-weight:700;font-size:32px;line-height:40px;letter-spacing:-1.008px}.create-Text.type-h4{font-family:'Inter', sans-serif;font-weight:700;font-size:24px;line-height:32px}.create-Text.type-h5{font-family:'Inter', sans-serif;font-weight:400;font-size:16px;line-height:24px}.create-Text.type-h6{font-family:'Inter', sans-serif;text-transform:uppercase;font-weight:400;font-size:14px;line-height:20px}.create-Text.type-body-lg{font-family:'Inter', sans-serif;font-size:16px;line-height:24px;font-weight:400}.create-Text.type-body-lg-heavy{font-family:'Inter', sans-serif;font-size:16px;line-height:24px;font-weight:600}.create-Text.type-body-md{font-family:'Inter', sans-serif;font-size:14px;line-height:20px;font-weight:400}.create-Text.type-body-md-heavy{font-family:'Inter', sans-serif;font-size:14px;line-height:20px;font-weight:600}.create-Text.type-body-sm{font-family:'Inter', sans-serif;font-size:12px;line-height:1.24px;font-weight:400}.create-Text.type-body-sm-heavy{font-family:'Inter', sans-serif;font-size:12px;line-height:1.24px;font-weight:600}.create-TextFieldBase__label{font-family:'Inter', sans-serif;font-size:14px;line-height:20px;font-weight:400;display:flex;align-items:center;padding-bottom:.5rem}.create-TextFieldBase__label>*+*{margin:0 0 0 .25rem}.create-TextFieldBase.variant-light .create-TextFieldBase__label{--tw-text-opacity:1;color:rgba(243, 244, 246, var(--tw-text-opacity))}.create-TextFieldBase.size-large .create-TextFieldBase__label{font-family:'Inter', sans-serif;font-size:16px;line-height:24px;font-weight:400}.create-TextFieldBase__label-required-indicator{--tw-bg-opacity:1;background-color:rgba(245, 158, 11, var(--tw-bg-opacity));width:.375rem;height:.375rem;border-radius:.25rem}.create-TextFieldBase__label-required-indicator .create-TextFieldBase:not(.is-required){display:none}.create-TextFieldBase__input-wrapper{border-width:1px;--tw-border-opacity:1;border-color:rgba(107, 114, 128, var(--tw-border-opacity));border-radius:6px;display:flex;align-items:center;position:relative}.create-TextFieldBase.is-focus-visible .create-TextFieldBase__input-wrapper{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);--tw-ring-opacity:1;--tw-ring-color:rgba(147, 197, 253, var(--tw-ring-opacity));--tw-ring-offset-width:2px}.create-TextFieldBase.is-focused .create-TextFieldBase__input-wrapper{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);--tw-ring-opacity:1;--tw-ring-color:rgba(147, 197, 253, var(--tw-ring-opacity));--tw-ring-offset-width:2px}.create-TextFieldBase.is-hovered:not(.is-focused) .create-TextFieldBase__input-wrapper{box-shadow:inset 0 0 0 1px #231f3208}.create-TextFieldBase.variant-light.is-focus-visible .create-TextFieldBase__input-wrapper{--tw-ring-opacity:1;--tw-ring-color:rgba(255, 255, 255, var(--tw-ring-opacity))}.create-TextFieldBase.variant-light.is-focused .create-TextFieldBase__input-wrapper{--tw-ring-opacity:1;--tw-ring-color:rgba(255, 255, 255, var(--tw-ring-opacity))}.create-TextFieldBase__input{font-family:'Inter', sans-serif;font-size:14px;line-height:20px;font-weight:400;border:none;width:100%;height:100%;background-color:transparent}.create-TextFieldBase__input:focus{outline:none}.create-TextFieldBase.size-large .create-TextFieldBase__input{padding:1.275rem .75rem;font-family:'Inter', sans-serif;font-size:16px;line-height:24px;font-weight:400}.create-TextFieldBase.size-medium .create-TextFieldBase__input{padding:.675rem .75rem}.create-TextFieldBase.size-small .create-TextFieldBase__input{padding:.375rem .75rem}.create-TextFieldBase.has-icon .create-TextFieldBase__input{padding-left:2.5rem}.create-TextFieldBase.has-autoresize .create-TextFieldBase__input{resize:none}.create-TextFieldBase.is-disabled .create-TextFieldBase__input{--tw-text-opacity:1;color:rgba(229, 231, 235, var(--tw-text-opacity));cursor:not-allowed;pointer-events:none}.create-TextFieldBase.variant-light .create-TextFieldBase__input{--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity))}.create-TextFieldBase__placeholder-wrapper{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;pointer-events:none}.create-TextFieldBase.size-large .create-TextFieldBase__placeholder-wrapper{padding:1.2rem .75rem}.create-TextFieldBase.size-medium .create-TextFieldBase__placeholder-wrapper{padding:.6rem .75rem}.create-TextFieldBase.size-small .create-TextFieldBase__placeholder-wrapper{padding:.32rem .75rem}.create-TextFieldBase.has-icon .create-TextFieldBase__placeholder-wrapper{padding-left:2.5rem}.create-TextFieldBase__input:not(:-moz-placeholder-shown)~.create-TextFieldBase__placeholder-wrapper{display:none}.create-TextFieldBase__input:not(:-ms-input-placeholder)~.create-TextFieldBase__placeholder-wrapper{display:none}.create-TextFieldBase__input:not(:placeholder-shown)~.create-TextFieldBase__placeholder-wrapper{display:none}.create-TextFieldBase__placeholder{font-family:'Inter', sans-serif;font-size:14px;line-height:20px;font-weight:400;--tw-text-opacity:1;color:rgba(55, 65, 81, var(--tw-text-opacity));overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.create-TextFieldBase.is-disabled .create-TextFieldBase__placeholder{--tw-text-opacity:1;color:rgba(229, 231, 235, var(--tw-text-opacity))}.create-TextFieldBase.variant-light .create-TextFieldBase__placeholder{--tw-text-opacity:1;color:rgba(243, 244, 246, var(--tw-text-opacity))}.create-TextFieldBase.size-large .create-TextFieldBase__placeholder{font-family:'Inter', sans-serif;font-size:16px;line-height:24px;font-weight:400}.create-TextFieldBase__icon{--tw-text-opacity:1;color:rgba(55, 65, 81, var(--tw-text-opacity));position:absolute;left:.75rem;pointer-events:none}.create-TextFieldBase.is-focused .create-TextFieldBase__icon{--tw-text-opacity:1;color:rgba(35, 31, 50, var(--tw-text-opacity))}.create-TextFieldBase.is-disabled .create-TextFieldBase__icon{--tw-text-opacity:1;color:rgba(229, 231, 235, var(--tw-text-opacity))}.create-TextFieldBase.variant-light .create-TextFieldBase__icon{--tw-text-opacity:1;color:rgba(243, 244, 246, var(--tw-text-opacity))}.create-TextFieldBase__validation-icon-wrapper{display:none;position:absolute;right:.75rem;border-radius:100%;width:1rem;height:1rem;align-items:center;justify-content:center}.create-TextFieldBase:not(.is-focused) .create-TextFieldBase__validation-icon-wrapper{display:flex}.create-TextFieldBase.is-valid:not(.variant-light) .create-TextFieldBase__validation-icon-wrapper{--tw-bg-opacity:1;background-color:rgba(236, 253, 245, var(--tw-bg-opacity))}.create-TextFieldBase.is-invalid:not(.variant-light) .create-TextFieldBase__validation-icon-wrapper{--tw-bg-opacity:1;background-color:rgba(254, 242, 242, var(--tw-bg-opacity))}.create-TextFieldBase__validation-icon{width:.75rem;height:.75rem}.create-TextFieldBase.is-valid .create-TextFieldBase__validation-icon{--tw-text-opacity:1;color:rgba(16, 185, 129, var(--tw-text-opacity))}.create-TextFieldBase.is-invalid .create-TextFieldBase__validation-icon{--tw-text-opacity:1;color:rgba(239, 68, 68, var(--tw-text-opacity))}.create-Tooltip{min-height:20px;min-width:40px;max-width:256px;border-radius:4px;border-bottom-width:2px;--tw-border-opacity:1;border-color:rgba(57, 53, 71, var(--tw-border-opacity));white-space:pre;--tw-bg-opacity:1;background-color:rgba(123, 121, 132, var(--tw-bg-opacity));padding-top:4px;padding-bottom:4px;padding-left:8px;padding-right:8px;text-align:center;--tw-text-opacity:1;color:rgba(232, 235, 237, var(--tw-text-opacity))}.create-Tooltip__arrow{fill:currentColor}.create-Tab{position:fixed;margin:0 auto;z-index:2147483645 !important;font-family:"Inter","Helvetica Neue",sans-serif;background-color:var(--primary-color);font-weight:400;transition:all .2s ease-in-out;opacity:.9}.create-Tab:hover{transform:scale(1.1);opacity:1}.create-Tab__inner{text-align:center;flex-grow:1;text-transform:uppercase;font-weight:bold}.create-Tab__pages{left:0;bottom:-32px}.create-Tab__notification{bottom:-64px;left:0px}.create-Alert.error{color:var(--red-800);background-color:var(--red-50)}.create-Alert.info{color:var(--blue-800);background-color:var(--blue-50)}.create-Alert.success{color:var(--green-800);background-color:var(--green-50)}.create-Alert.warning{color:var(--yellow-800);background-color:var(--yellow-50)}.create-Alert__close:hover{background-color:var(--red-100)}.create-Alert.info .create-Alert__close:hover{background-color:var(--blue-100)}.create-Alert.success .create-Alert__close:hover{background-color:var(--green-100)}.create-Alert.warning .create-Alert__close:hover{background-color:var(--yellow-100)}.create-Modal{position:fixed;top:0;left:0;z-index:2147483647 !important;display:none;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;outline:0}.create-Modal.fade{transition:opacity .15s cubic-bezier(0.4, 0, 0.2, 1)}.create-Modal.fade:not(.show){opacity:0}.create-Modal.show{display:block;opacity:1}.create-Modal__content{margin-top:20px;justify-content:center;align-items:center;background-color:#fff;width:100%;border:1px solid rgba(0,0,0,.05);position:relative;pointer-events:auto;background-clip:padding-box;outline:0;border-radius:10px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.create-Modal__dialog{position:relative;pointer-events:none;margin:0 auto;width:auto;max-width:850px}.create-Modal.fade .create-Modal__dialog{transition:transform .3s ease-out;transform:translate(0, -50px)}.create-Modal.show .create-Modal__dialog{transform:none}.create-Modal__shadow{position:fixed;top:0;left:0;z-index:2147483646 !important;width:100vw;height:100vh;background-color:#000;transition-duration:.15s;transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.create-Modal__shadow.fade{opacity:0}.create-Modal__shadow.show{opacity:.2}.create-ShoppingPagePopup{z-index:2147483647 !important;position:fixed;left:0px;top:50vh;display:none;cursor:pointer;padding-top:4px;padding-bottom:4px}.create-ShoppingPagePopup.is-showing{display:flex}.create-ShoppingPagePopup__content{position:relative;margin-left:8px;display:flex;width:176px;flex-direction:column;row-gap:16px;border-radius:6px;--tw-bg-opacity:1;background-color:rgba(255, 255, 255, var(--tw-bg-opacity));padding:16px;border:1px solid #e5e7eb;box-shadow:0px 1px 2px rgba(0,0,0,.03),0px 4px 12px rgba(0,0,0,.03)}.create-ShoppingPagePopup__at-stores-label{padding-left:8px;padding-right:12px;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:2px}.create-ShoppingPagePopup__close-button{position:absolute;right:8px;top:8px;cursor:pointer}.create-ShoppingPagePopup__trigger-button{display:flex;justify-content:flex-start}.create-ShoppingPagePopup__btn{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border-radius:6px;--tw-bg-opacity:1;background-color:rgba(17, 24, 39, var(--tw-bg-opacity));padding-left:12px;padding-right:12px;padding-top:10px;padding-bottom:10px;font-weight:500;--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity));--tw-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.05);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);transition-property:all;transition-timing-function:cubic-bezier(0, 0, 0.2, 1);transition-duration:150ms}.create-ShoppingPagePopup__btn:hover{--tw-scale-x:102%;--tw-scale-y:102%;transform:var(--tw-transform)}.create-ShoppingPagePopup__btn{font-size:12px}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.create-ShoppingPagePopup.is-showing{animation:fadeIn 120ms ease-in}.create-ShoppingPagePopup:not(.is-showing){animation:fadeOut 120ms ease-in}.hover\:rotate-\[-4deg\]:hover{--tw-rotate:-4deg;transform:var(--tw-transform)}.hover\:border-gray-300:hover{--tw-border-opacity:1;border-color:rgba(209, 213, 219, var(--tw-border-opacity))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgba(67, 56, 202, var(--tw-bg-opacity))}.hover\:text-gray-800:hover{--tw-text-opacity:1;color:rgba(31, 41, 55, var(--tw-text-opacity))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgba(99, 102, 241, var(--tw-border-opacity))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgba(99, 102, 241, var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}@media (min-width: 640px){.sm\:text-sm{font-size:14px;line-height:20px}}</style></template></div></div></body><div style="all: initial !important;"><template shadowrootmode="open"></template></div></html>
